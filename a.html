@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Lol</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type="text/javascript">
+
+			load=()=>{
+				let a=$("#link").val()
+				$('#frame1').attr('src', a)
+			}
+
+			$( document ).ready(function() {
+
+			});
+
+		</script>
+	</head>
+	<body>
+		Enter Link<input id="link" type="text" name="" value="">
+		<button type="button" onclick="load()">load</button>
+		<iframe id="frame1" src="" width="100%" height="500px"></iframe>
+	</body>
+</html>
