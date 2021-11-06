@@ -14,7 +14,12 @@
 
 
 			$( document ).ready(function() {
-
+				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+					anchor.addEventListener('click', function (e) {
+						e.preventDefault();
+						document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+					});
+				});
 			});
 
 		</script>
@@ -27,7 +32,7 @@
 				<a class="ml-auto mx-2" href="#tpb_table">Torrents</a>
 				<a class="mx-2" href="#wp_table">Web-Proxies</a>
 				<a class="mx-2" href="#deep_table">Onion Links</a>
-				<a class="mx-2" href="#">About US</a>
+				<a class="mx-2" href="#about_section">About US</a>
 			</div>
 		</div>
 
@@ -263,14 +268,14 @@
 
 		<div class="col-12 p-0 bg-color">
 			<div class="col-md-7 p-5">
-				<span class="h3 red">ABOUT US</span>
+				<span id="about_section" class="h3 red">ABOUT US</span>
 				<br>
 				<span class="d-block mt-2">This place is meant for our pirate family thinks beyond Rich Capitalist laws.</span>
 				<span class="d-block">An Initiative to curb Censorship.</span>
 				<br><span>Made with <i class="fa fa-heart red"></i> and <i class="fab fa-github"></i></span>
 			</div>
 			<div class="col-12 text-center border-top border-white py-2">
-				<span class=""> <i class="far fa-copyright red"></i> All Rights Reserved</span>
+				<span class=""> <i class="far fa-copyright red"></i> No Rights Reserved</span>
 			</div>
 		</div>
 
